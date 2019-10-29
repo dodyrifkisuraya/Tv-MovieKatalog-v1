@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">iStream</string>
+    <string name="realised_date">Realised Date :</string>
+    <string name="duration">Duration :</string>
+    <string name="genre">Genre :</string>
+    <string name="discription">Discription</string>
+    <string name="directors">Directors :</string>
+    <string name="original_language">Original Language :</string>
+    <string name="setting">Setting</string>
+    <string name="pilih_bahasa">Change Language</string>
+    <string name="tv_show">TV Show</string>
+    <string name="movie">Movie</string>
+</resources>

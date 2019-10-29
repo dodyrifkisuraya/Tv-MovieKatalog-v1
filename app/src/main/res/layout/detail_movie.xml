@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".DetailMovie">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:fitsSystemWindows="true"
+            android:minHeight="?attr/actionBarSize"
+            app:layout_constraintTop_toTopOf="parent"
+            app:titleTextColor="@android:color/white">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary">
+
+                <ImageView
+                    android:id="@+id/back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_arrow_back_black_24dp" />
+
+
+            </RelativeLayout>
+        </android.support.v7.widget.Toolbar>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/thrailer"
+            android:layout_width="match_parent"
+            android:layout_height="475dp"
+            app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+            <ImageView
+                android:id="@+id/img_thumnail"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_launcher_background"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/floatingActionButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="@color/colorAccent"
+                android:clickable="true"
+                android:src="@drawable/ic_play_arrow_black_24dp"
+                app:layout_constraintBottom_toBottomOf="@+id/img_thumnail"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/img_thumnail"
+                app:layout_constraintTop_toTopOf="@+id/img_thumnail" />
+
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                app:layout_constraintBottom_toBottomOf="@+id/img_thumnail"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/gradient" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/thrailer">
+
+            <TextView
+                android:id="@+id/judul"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Munafik"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/statis_rilis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/realised_date"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/judul" />
+
+            <TextView
+                android:id="@+id/tgl_rilis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="February 16, 2018"
+                app:layout_constraintStart_toEndOf="@id/statis_rilis"
+                app:layout_constraintTop_toBottomOf="@id/judul" />
+
+            <TextView
+                android:id="@+id/statis_durasi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/duration"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/statis_rilis" />
+
+            <TextView
+                android:id="@+id/durasi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="150 menit"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/statis_durasi"
+                app:layout_constraintTop_toBottomOf="@id/tgl_rilis" />
+
+            <TextView
+                android:id="@+id/statis_genre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/genre"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/durasi" />
+
+            <TextView
+                android:id="@+id/tv_genre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Horror"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/statis_genre"
+                app:layout_constraintTop_toBottomOf="@id/durasi" />
+
+            <View
+                android:id="@+id/garis"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimary"
+                android:visibility="visible"
+                app:layout_constraintTop_toBottomOf="@id/statis_diskripsi" />
+
+            <TextView
+                android:id="@+id/statis_diskripsi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/discription"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_genre" />
+
+            <TextView
+                android:id="@+id/diskripsi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Adam adalah seorang praktisi medis Muslim yang tidak dapat menerima kenyataan bahwa istrinya tidak lagi di dunia ini. Ketika dia setuju untuk mengobati seorang wanita bernama Maria, hal-hal aneh dan mengganggu mulai terjadi."
+                app:layout_constraintTop_toBottomOf="@id/statis_diskripsi" />
+
+            <TextView
+                android:id="@+id/statis_director"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/directors"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/diskripsi" />
+
+            <TextView
+                android:id="@+id/director"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sayung Sad"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/statis_director"
+                app:layout_constraintTop_toBottomOf="@id/diskripsi" />
+
+            <TextView
+                android:id="@+id/statis_bahasa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/original_language"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/director" />
+
+            <TextView
+                android:id="@+id/bahasa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Indonesia"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/statis_bahasa"
+                app:layout_constraintTop_toBottomOf="@id/director" />
+        </android.support.constraint.ConstraintLayout>
+    </android.support.constraint.ConstraintLayout>
+
+
+</ScrollView>
